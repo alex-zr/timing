@@ -11,7 +11,7 @@ public class HibernateUtilTest {
 
 	@Test
 	public void test() {
-//		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-//		assertNotNull(sessionFactory);
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		assertNotNull(sessionFactory);
 	}
 }
