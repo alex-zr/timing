@@ -18,7 +18,7 @@ import ua.com.al1.timing.domain.Student;
 /**
  * Servlet implementation class UserList
  */
-@WebServlet(urlPatterns = {"/UserList"})
+@WebServlet(urlPatterns = {"/userList"})
 public class UserList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

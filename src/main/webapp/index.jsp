@@ -5,9 +5,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Students management</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <a href="/timing/userList">Список студентов</a>
+        <a href="/timing/newStudentForm.jsp">Новый студент</a>
+        <a href="/timing/scheduler">Расписание занятий</a>
+        <a href="/timing/payments">Оплата</a>
     </body>
 </html>

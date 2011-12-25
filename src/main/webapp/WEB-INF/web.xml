@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-    <display-name>timing</display-name>
+    <display-name>Timing</display-name>
     <session-config>
         <session-timeout>
             30
@@ -9,12 +9,20 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    <servlet>
+  <servlet>
   	<servlet-name>userlist</servlet-name>
   	<servlet-class>ua.com.al1.timing.UserList</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>userlist</servlet-name>
-  	<url-pattern>/list</url-pattern>
+  	<url-pattern>/userList</url-pattern>
+  </servlet-mapping>    
+  <servlet>
+  	<servlet-name>saveStudent</servlet-name>
+  	<servlet-class>ua.com.al1.timing.SaveStudent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>saveStudent</servlet-name>
+  	<url-pattern>/saveStudent</url-pattern>
   </servlet-mapping>    
 </web-app>

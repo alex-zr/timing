@@ -44,6 +44,13 @@
 			<version>1.6.4</version>
 		</dependency>
 
+		<!-- Contans org.slf4j.impl.StaticLoggerBinder -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+
 		<!-- Hibernate gives you a choice of bytecode providers between cglib and 
 			javassist -->
 		<dependency>

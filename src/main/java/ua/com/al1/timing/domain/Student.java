@@ -12,13 +12,71 @@ public class Student {
     @Column(name="STUD_ID")
     private Long studId;
 
-    @Column(name="NAME")
+    @Column(name="name")
     private String name;
 
-    @Column(name="SURNAME")
+    @Column(name="surname")
     private String surname;
 
-    public Long getStudId() {
+    @Column(name="patronymic")
+    private String patronymic;
+    
+    @Column(name="phone")
+    private String phone;
+    
+    @Column(name="email")
+    private String email;
+    
+    @Column(name="skype")
+    private String skype;
+    
+    @Column(name="keywords")
+    private String keywords;
+    
+    @Column(name="cources")
+    private String cources;
+
+    public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSkype() {
+		return skype;
+	}
+
+	public void setSkype(String skype) {
+		this.skype = skype;
+	}
+
+	public String getKeywords() {
+		return keywords;
+	}
+
+	public void setKeywords(String keywords) {
+		this.keywords = keywords;
+	}
+
+	public String getCources() {
+		return cources;
+	}
+
+	public void setCources(String cources) {
+		this.cources = cources;
+	}
+
+	public Long getStudId() {
         return studId;
     }
 
@@ -42,7 +100,15 @@ public class Student {
         this.name = name;
     }
 
-    @Override
+	public String getPatronymic() {
+		return patronymic;
+	}
+
+	public void setPatronymic(String patronymic) {
+		this.patronymic = patronymic;
+	}
+
+	@Override
     public String toString() {
         return "Student{" +
                 "studId=" + studId +
