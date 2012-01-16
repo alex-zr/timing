@@ -8,13 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ua.com.al1.timing.dao.DaoFactory;
 import ua.com.al1.timing.dao.StudentDao;
 import ua.com.al1.timing.domain.Student;
 
 //@WebServlet("/saveStudent")
-public class SaveStudent extends HttpServlet {
+public class SaveStudentAction extends HttpServlet {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 6107309633575132769L;
 	private static final String USER_NAME = "userName";
 	private static final String USER_SURNAME = "userName";
 	private static final String PATRONYMIC = "patronymic";
@@ -24,17 +25,23 @@ public class SaveStudent extends HttpServlet {
 	private static final String KEYWORDS = "keywords";
 	private static final String COURCES = "cources";
 	
-	private StudentDao userDao;
+	private StudentDao studentDao;
 	
 	public void init() throws ServletException {
-		userDao = new StudentDao();
+		studentDao = DaoFactory.getStudentDao();
+	}
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doGet(req, resp);
 	}
 	
 	protected void doGet(HttpServletRequest req,
 			HttpServletResponse response) throws ServletException, IOException {
 		
 		Student stud = createUserByParams(req);
-		userDao.save(stud);
+		studentDao.save(stud);
+		req.getRequestDispatcher("/studentsList.jsp").forward(req, response);
 	}
 
 	private Student createUserByParams(HttpServletRequest req) {

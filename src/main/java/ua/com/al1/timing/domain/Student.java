@@ -2,14 +2,18 @@ package ua.com.al1.timing.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
 
 @Entity
 @Table(name="students")
 public class Student {
-    @Id
-    @Column(name="STUD_ID")
+    @Id @GeneratedValue(strategy=GenerationType.AUTO)
     private Long studId;
 
     @Column(name="name")
@@ -109,11 +113,10 @@ public class Student {
 	}
 
 	@Override
-    public String toString() {
-        return "Student{" +
-                "studId=" + studId +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
-    }
+	public String toString() {
+		return "Student [studId=" + studId + ", name=" + name + ", surname="
+				+ surname + ", patronymic=" + patronymic + ", phone=" + phone
+				+ ", email=" + email + ", skype=" + skype + ", keywords="
+				+ keywords + ", cources=" + cources + "]";
+	}
 }

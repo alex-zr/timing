@@ -8,21 +8,21 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
-  <servlet>
-  	<servlet-name>userlist</servlet-name>
-  	<servlet-class>ua.com.al1.timing.UserList</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>userlist</servlet-name>
-  	<url-pattern>/userList</url-pattern>
-  </servlet-mapping>    
+    </welcome-file-list>   
   <servlet>
   	<servlet-name>saveStudent</servlet-name>
-  	<servlet-class>ua.com.al1.timing.SaveStudent</servlet-class>
+  	<servlet-class>ua.com.al1.timing.SaveStudentAction</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>saveRate</servlet-name>
+  	<servlet-class>ua.com.al1.timing.SaveRateAction</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>saveStudent</servlet-name>
   	<url-pattern>/saveStudent</url-pattern>
+  </servlet-mapping>    
+  <servlet-mapping>
+  	<servlet-name>saveRate</servlet-name>
+  	<url-pattern>/saveRate</url-pattern>
   </servlet-mapping>    
 </web-app>

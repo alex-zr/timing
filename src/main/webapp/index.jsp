@@ -8,9 +8,6 @@
         <title>Students management</title>
     </head>
     <body>
-        <a href="/timing/userList">Список студентов</a>
-        <a href="/timing/newStudentForm.jsp">Новый студент</a>
-        <a href="/timing/scheduler">Расписание занятий</a>
-        <a href="/timing/payments">Оплата</a>
+		<jsp:include page="/header.jsp"></jsp:include>
     </body>
 </html>

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" enctype="multipart/form-data" action="/TestIntBrowser/Test">
+	<form method="GET" action="/timing/saveStudent">
 	<fieldset>
 	<legend>Личная карточка студента</legend>
 	
