@@ -10,7 +10,24 @@
 	<name>timing</name>
 	<url>http://maven.apache.org</url>
 
+    <properties>
+        <jdk.version>1.6</jdk.version>
+        <hibernate.version>3.5.6-Final</hibernate.version>
+        <servlet-api.version>3.0.1</servlet-api.version>
+        <log4j.version>1.2.17</log4j.version>
+        <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+        <mysql.connector.version>5.1.21</mysql.connector.version>
+    </properties>
+
 	<dependencies>
+        <!-- Servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>

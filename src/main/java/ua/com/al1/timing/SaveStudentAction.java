@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ua.com.al1.timing.dao.DaoFactory;
+//import ua.com.al1.timing.dao.DaoFactory;
 import ua.com.al1.timing.dao.StudentDao;
 import ua.com.al1.timing.domain.Student;
 
@@ -28,7 +28,7 @@ public class SaveStudentAction extends HttpServlet {
 	private StudentDao studentDao;
 	
 	public void init() throws ServletException {
-		studentDao = DaoFactory.getStudentDao();
+//		studentDao = DaoFactory.getStudentDao();
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
